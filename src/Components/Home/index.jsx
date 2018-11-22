@@ -5,7 +5,6 @@ export default function index() {
   return (
     <div class="bck_blue">
         <Features/>
-    <h1>HELLLLO HOW ARE YOU</h1>
       
     </div>
   )
