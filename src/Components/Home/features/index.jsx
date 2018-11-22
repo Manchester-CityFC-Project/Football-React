@@ -3,7 +3,7 @@ import Stripe from './stripe'
 
 export default function Home() {
   return (
-    <div>
+    <div class="featured_wrapper">
         <Stripe/>
       
     </div>

@@ -1,10 +1,22 @@
-import React from 'react'
+import React, {Component} from 'react'
+import {easePolyOut} from 'd3-ease';
+import Animate from 'react-move/Animate'
 
-export default function stripe() {
-  return (
-    <div>
-        <h1>Stripe</h1>
-      
-    </div>
-  )
+class Stripe extends Component {
+
+  ShowStripes = () => <div>
+    Hello Stripe
+  </div>
+
+   render () {
+      return (
+         <div className="featured_stripes">
+           {this.ShowStripes()}
+
+           </div>
+      )
+   }
+
 }
+
+export default Stripe
