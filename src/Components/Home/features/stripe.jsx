@@ -67,7 +67,6 @@ class Stripe extends Component {
 
            }}
             >
-   
             </div>
            )
         }}
