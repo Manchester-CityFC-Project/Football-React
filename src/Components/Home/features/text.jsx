@@ -34,6 +34,76 @@ class Text extends Component {
             </Animate>
            
     )
+
+
+    AnimateFirst = () => (
+        <Animate
+        show={true}
+        start={{
+           opacity:0,
+           x:503,
+           y:450
+          
+        }}
+        enter={{
+          opacity:[1],
+          x:[273],
+          y:[450],         
+          timing:{duration:500, ease:easePolyOut}
+        }}
+        >
+            {({ opacity , x, y}) => {
+                 return(
+                     <div 
+                     className="featured_first"
+                     style={{
+                         opacity,
+                         transform:`translate(${x}px,${y}px)`
+                     }}
+                     >
+                    League
+                     </div>
+                 )
+            }}
+
+            </Animate>
+           
+    )
+
+
+    AnimateSecond= () => (
+        <Animate
+        show={true}
+        start={{
+           opacity:0,
+           x:503,
+           y:586
+          
+        }}
+        enter={{
+          opacity:[1],
+          x:[273],
+          y:[586],         
+          timing:{delay:300, duration:500, ease:easePolyOut}
+        }}
+        >
+            {({ opacity , x, y}) => {
+                 return(
+                     <div 
+                     className="featured_first"
+                     style={{
+                         opacity,
+                         transform:`translate(${x}px,${y}px)`
+                     }}
+                     >
+                    ChampionShip
+                     </div>
+                 )
+            }}
+
+            </Animate>
+           
+    )
      
 
 
@@ -42,6 +112,8 @@ class Text extends Component {
               
             <div className="featured_text">
                 {this.AnimateNumber()}
+                {this.AnimateFirst()}
+                {this.AnimateSecond()}
 
                 </div>
          )
