@@ -2,17 +2,21 @@ import React, {Component} from 'react'
 
 import {Matches} from '../../firebase'
 import {firebaseLooper} from '../ui/convertArray'
+import { RevarseArray} from '../ui/revarseArray'
 
 class Blocks extends Component {
 
     state = {
+        matches:[]
          
     }
 
     componentDidMount() {
          Matches.limitToLast(6).once('value').then((Snapshot) => {
-             const Snap=  firebaseLooper(Snapshot)
-             console.log(Snap)
+             const matches=firebaseLooper(Snapshot)
+              this.setState({
+                  matches:RevarseArray(matches)
+              })
          })
     }
 
@@ -24,9 +28,10 @@ class Blocks extends Component {
       
 
      render () {
+         console.log(this.state)
           return (
                <div className="home_matches">
-            {this.ShowMatches()}
+            {this.ShowMatches(this.state.matches)}
                    </div>
           )
      }
