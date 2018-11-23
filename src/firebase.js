@@ -15,8 +15,9 @@ const config = {
 
   const firebaseDB = firebase.database();
 
-  firebaseDB.ref('matches').once('value').then((snapShot) => {
+ const Matches = firebaseDB.ref('matches')
 
-    console.log(snapShot.val())
-
-  })
+ export {
+    firebase,
+    Matches
+ }
