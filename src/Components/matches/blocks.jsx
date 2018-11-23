@@ -3,6 +3,7 @@ import React, {Component} from 'react'
 import {Matches} from '../../firebase'
 import {firebaseLooper} from '../ui/convertArray'
 import { RevarseArray} from '../ui/revarseArray'
+import MatchesBlocks from '../ui/matchesBlocks'
 
 class Blocks extends Component {
 
@@ -20,10 +21,17 @@ class Blocks extends Component {
          })
     }
 
-    ShowMatches = () => (
-         <div>
-              Blocks
-             </div>
+    ShowMatches = (matches) => (
+        matches ? matches.map((match) => (
+            <div className="item" key={match.id}>
+                <div className="wrapper"> 
+                <MatchesBlocks match={match}/>
+                </div>
+           </div>     
+        ))
+
+        :null
+        
     )
       
 
