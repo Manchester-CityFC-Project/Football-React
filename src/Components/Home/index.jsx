@@ -1,6 +1,6 @@
 import React from 'react'
 import Features from '../Home/features/index'
-import Matches from '../matches/index'
+import Matches from '../Home/matches/index'
 
 export default function index() {
   return (

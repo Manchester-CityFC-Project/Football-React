@@ -1,9 +1,9 @@
 import React, {Component} from 'react'
 
-import {Matches} from '../../firebase'
-import {firebaseLooper} from '../ui/convertArray'
-import { RevarseArray} from '../ui/revarseArray'
-import MatchesBlocks from '../ui/matchesBlocks'
+import {Matches} from '../../../firebase'
+import {firebaseLooper} from '../../ui/convertArray'
+import { RevarseArray} from '../../ui/revarseArray'
+import MatchesBlocks from '../../ui/matchesBlocks'
 import Slide from 'react-reveal/Slide'
 
 class Blocks extends Component {
