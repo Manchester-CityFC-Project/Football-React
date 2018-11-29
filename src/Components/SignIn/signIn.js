@@ -66,11 +66,30 @@ class SignIn extends Component {
         
         this.setState({
             formError:false,
-            formData:newFormdata
+            formData:newFormdata,
+           
         })
         
  
      }
+
+
+     resetFormSuccess(type) {
+        const newFormdata= {...this.state.formData}
+
+        for(let key in newFormdata) {
+            newFormdata[key].value='';
+            newFormdata[key].valid='';
+            newFormdata[key].validationMessage='';
+
+        }
+
+        this.setState ({
+             formError:true,
+             formData:newFormdata,
+
+        })
+    }
 
 
     
@@ -89,12 +108,14 @@ class SignIn extends Component {
      firebase.auth().signInWithEmailAndPassword(
          dataToSubmit.email,
          dataToSubmit.password).then(snapShot => {
-              console.log(snapShot)
+              this.props.history.push('/dashbaord');
+              this.resetFormSuccess(true);
          })
          .catch(error => {
              this.setState({
                   formError:true
              })
+             this.resetFormSuccess(false);
          })
 
 
@@ -108,6 +129,7 @@ class SignIn extends Component {
 
     }
 
+    
    
     
 
