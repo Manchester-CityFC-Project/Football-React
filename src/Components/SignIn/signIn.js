@@ -61,7 +61,6 @@ class SignIn extends Component {
  
         newFormdata[element.id]=newElement;
      
-        console.log(newFormdata);
         
         this.setState({
             formError:false,
@@ -72,7 +71,29 @@ class SignIn extends Component {
      }
 
 
-    submitForm = () => {
+    
+     submitForm = (event) => {
+    
+        event.preventDefault();
+        let dataToSubmit ={};
+        let formIsValid=true;
+
+        for(let key in this.state.formData) {
+            dataToSubmit[key]=this.state.formData[key].value;
+            formIsValid=this.state.formData[key].valid && formIsValid;
+        }
+    
+        if(formIsValid) {
+         console.log(dataToSubmit);
+
+
+        }
+        else {
+            this.setState ( {
+                 formError:true,
+                 
+            })
+        }
 
     }
 
