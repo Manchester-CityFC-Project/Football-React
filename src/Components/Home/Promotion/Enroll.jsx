@@ -49,7 +49,39 @@ class Enroll extends Component {
            formData:newFormdata
        })
        
+
     }
+
+    resetFormSuccess() {
+        const newFormdata= {...this.state.formData}
+
+        for(let key in newFormdata) {
+            newFormdata[key].value='';
+            newFormdata[key].valid='';
+            newFormdata[key].validationMessage='';
+
+        }
+
+        this.setState ({
+             formError:false,
+             formData:newFormdata,
+             formSuccess:'Congrattulations'
+
+        })
+
+         this.successMsgClear();
+    }
+    successMsgClear(){
+        setTimeout(() => {
+             this.setState({
+                  formSuccess:'' 
+             })
+        },1000)
+    }
+
+
+
+
 
 
 
@@ -66,14 +98,19 @@ class Enroll extends Component {
     
         if(formIsValid) {
             console.log(dataToSubmit);
+            this.resetFormSuccess();
         }
         else {
             this.setState ( {
-                 formError:true
+                 formError:true,
+                 
             })
         }
 
     }
+
+
+
 
 
 
@@ -97,7 +134,7 @@ class Enroll extends Component {
 
                   </div>:null}
 
-
+                 <div classsName="success_label">{this.state.formSuccess}</div>
                   <button onClick={(event) => this.submitForm(event)}>Enroll</button>
               </div>
 
