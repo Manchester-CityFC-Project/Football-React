@@ -36,9 +36,13 @@ class Enroll extends Component {
        const newElement= {...newFormdata[element.id]}
 
        newElement.value=element.event.target.value;
-      let valiDate = validate(newElement);
-      console.log(valiDate)
+      let validData = validate(newElement);
+       newElement.valid=validData[0];
+       newElement.validationMessage=validData[1];
+
        newFormdata[element.id]=newElement;
+    
+       console.log(newFormdata);
        
        this.setState({
            formData:newFormdata
