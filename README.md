@@ -1,4 +1,4 @@
-## Fullstack-Hoffyevents-react-redux
+## Manchester-city-project
 
 ## About
 
