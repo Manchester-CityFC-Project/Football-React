@@ -2,7 +2,7 @@
 
 ## About
 
- `this is  my learning based project done 90% work, I always wished I'd had a social network for event publishing to find other event publisher  to collaborate with. It's like Hoffyevent, except instead of dates it's for finding event location to city with and make tracks. View all users, view each user's profile and information,  see similar users in the sidebar. this is also can track users activity`
+ `this is  my learning based project done 90% work, I always wished I'd had manchaster official type dynamic project, Manchester City Football Club, commonly known as Man. City, is a football club in Manchester, England.`
 
  
 
@@ -29,28 +29,19 @@
 
 - `React`
   - `React-router`
-  - `google-map-react`
-  - `react-lazyload`
+  - `react-reveal`
+  - `react-animation`
   - `react-infinite-scroller`
-  - `react-places-autocomplete`
-  - `react-dropzone`
+  - `react-`
+
   - `react-loadable`
-  - `react-load-script`
-  - `react-places-autocomplete`
-  - `react-datepicker`
+  - `react-load-script``
   - `react-dom`
   - `react-router-dom`
   - `react-cropper`
-- `Redux`
-  - `react-redux`
-  - `react-redux-toastr`
-  - `redux-auth-wrapper`
-  - `redux-form`
-  - `redux-thunk`  
-  - `redux-firestore`
+   - `react-material-css`
 
 - `Firebase`
-- `Semantic-ui-react`
 - `Revalidate`
 - `Moment`
 - `Date-fns`
